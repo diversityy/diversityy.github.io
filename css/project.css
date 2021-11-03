@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
+body{
+	background-image: url("../image/dam.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+h1{
+	font-family: tieude1;
+	font-size: 5em;
+	color: white;
+}
+.nav1{
+	height: 80px;
+	width: 100%;
+	position: fixed;
+	z-index: 3;
+	display: flex;
+}
+.nav1 img{
+	height: 55px;
+	margin: 25px 70px;
+}
+.nd1{
+	width: 100%;
+	height: 100vh;
+	background: url("../image/tren.png");
+	background-size: cover;
+	text-align: center;
+	-webkit-animation:slide-in-top 1s cubic-bezier(.77,0.000,.175,1.000) 0.5s both;
+}
+@-webkit-keyframes slide-in-top{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-top{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+.chu{
+	padding-top:  8%;
+	text-align: center;
+}
+.vang{
+	color: #ffca00;
+}
+.nd2{
+	height: 200vh;
+	width: 100%;
+	padding: 0 10%;
+	clear: both;
+}
+.our{
+	color: #171413;
+	margin: 40px 0;
+}
+.footer{
+	height: 50vh;
+	width: 100%;
+	background: url("../image/footer.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+}
+.logo{
+	height: 85px;
+	margin-top: 75%;
+	margin-bottom: 10px;
+}
+.local{
+	align-content: center;
+}
+.local img{
+	height: 25px;
+	padding-right: 30px;
+	transition: 0.5s ease;
+}
+.local img:hover{
+	transform: scale(1.2);
+}

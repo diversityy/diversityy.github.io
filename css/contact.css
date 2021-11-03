@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
+body{
+	background-image: url("../image/dam.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+h1{
+	font-family: tieude1;
+	font-size: 5em;
+	color: white;
+}
+.nav1{
+	height: 80px;
+	width: 100%;
+	position: fixed;
+	z-index: 3;
+	display: flex;
+}
+.nav1 img{
+	height: 55px;
+	margin: 25px 70px;
+}
+.nd1{
+	background: url("../image/img2.png");
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100vh;
+	text-align: center;
+	width: 100%;
+	-webkit-animation:slide-in-left 1s cubic-bezier(.68,-.55,.265,1.55) .5s both;
+}
+@-webkit-keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
+.nd1 h1{
+	color: #ffca00;
+	padding-top: 100px;
+}
+/*form*/
+.container 		{ 
+  font-family: 'Manrope', sans-serif;
+  width:800px; 
+  margin:30px auto 0; 
+  display:block; 
+  padding:10px 50px 50px;
+}
+h2 		 { 
+  text-align:center; 
+  margin-bottom:50px; 
+	color: white;
+}
+/* form starting stylings ------------------------------- */
+.group 			  { 
+  position:relative; 
+  margin: 0 10px;
+  margin-bottom: 45px; 
+}
+form{
+	display: flex;
+	justify-content: center;
+	color: white;
+}
+
+input{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:350px;
+  border:none;
+  border-bottom:1px solid white;
+  background:transparent;
+color: white;
+}
+.lh4 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:720px;
+  border:none;
+  border-bottom:1px solid white;
+  background:transparent;
+color: white;
+	 font-family: 'Manrope', sans-serif;
+}
+
+input:focus 		{
+	outline:none;
+	color: white;
+}
+.lh4:focus 		{
+	outline:none;
+	color: white;
+}
+/* LABEL ======================================= */
+label 				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#999;
+}
+textarea:focus ~ label, textarea:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#999;
+}
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:350px; }
+.bar1 	{ position:relative; display:block; width:720px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#ffca00;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+.lh4:focus ~ .bar:before, .lh4:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+.lh4:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#999; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#999; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#999; }
+  to 	{ width:0; background:transparent; }
+}
+.send{
+	background: white;
+	font-family: tieude1;
+	color: #171413;
+	font-size: 20px;
+	padding: 15px 0;
+	margin: 0 260px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.send:hover{
+	-webkit-animation:shake-top 1s cubic-bezier(.455,.03,.515,.955) infinite both;
+}
+@-webkit-keyframes shake-top{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg);-webkit-transform-origin:50% 0;transform-origin:50% 0}10%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}20%,40%,60%{-webkit-transform:rotate(-4deg);transform:rotate(-4deg)}30%,50%,70%{-webkit-transform:rotate(4deg);transform:rotate(4deg)}80%{-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}90%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}}@keyframes shake-top{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg);-webkit-transform-origin:50% 0;transform-origin:50% 0}10%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}20%,40%,60%{-webkit-transform:rotate(-4deg);transform:rotate(-4deg)}30%,50%,70%{-webkit-transform:rotate(4deg);transform:rotate(4deg)}80%{-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}90%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}}
