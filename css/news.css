@@ -9,6 +9,10 @@
 ::-webkit-scrollbar{
 	width: 0px;
 }
+@font-face{
+	src: url("../font/MonumentExtended-Ultrabold.otf");
+	font-family: tieude1;
+}
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
 body{
 	background-image: url("../image/dam.jpg");
