@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <title>Diversity - About us</title>
 	<link href="css/about.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="css/style.css" type="text/css">
 	 <link rel="stylesheet" href="css/Back .css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="shortcut icon" href="image/favicon (1).ico" />
+	<link rel="stylesheet" href="css/menu.css">
+	<script src="Js/gsap.min.js"></script>
 </head>
 
 <body>
@@ -21,22 +22,32 @@
 
 	<div class="nav1">
 			<a href="index.html"><img src="image/logo.png"></a>
-					<div class="menu-icon">
-	<span class="menu-icon__line menu-icon__line-left"></span>
-	<span class="menu-icon__line"></span>
-	<span class="menu-icon__line menu-icon__line-right"></span>
-</div>
-<div class="nav">
-	<div class="nav__content">
-		<ul class="nav__list">
-			<li class="nav__list-item"><a href="contact.html">About</a></li>
-			<li class="nav__list-item"><a href="Project.html">Projects</a></li>
-			<li class="nav__list-item"><a href="News.html">News</a></li>
-			<li class="nav__list-item"><a href="contact.html">Contact</a></li>
-		</ul>
+        <div class="button open" onclick="toggle()"></div>
+
+    
+    <div class="menu">
+        <div class="button close" onclick="togglec()"></div>
+
+        <ul class="ul">
+            <li class="li1 li"><a href="about.html">About</a></li>
+            <li class="li2 li"><a href="Project.html">Projects</a></li>
+            <li class="li3 li"><a href="News.html">News</a></li>
+            <li class="li4 li"><a href="contact.html">Contact</a></li>
+            <div class="bg1 bg"></div>
+            <div class="bg2 bg"></div>
+            <div class="bg3 bg"></div>
+            <div class="bg4 bg"></div>
+        </ul>
+        <div class="social">
+            <ul>
+			<li class="social-li"><a href="#">behance</a></li>
+            <li class="social-li"><a href="#">facebook</a></li>
+            <li class="social-li"><a href="#">instagram</a></li>
+            <li class="social-li"><a href="#">youtube</a></li>
+        </ul>
+        </div>
+    </div>
 	</div>
-</div>
-		</div>
 	<div class="content">
 		<div class="nen">
 			<div class="chu">
@@ -50,7 +61,7 @@
 				<img data-aos="flip-right" data-aos-duration="5000" data-aos-delay="50" src="image/banner-2.jpg">
 		</div>
 		<div class="nd3">
-			<div data-aos="fade-up" data-aos-duration="3000" data-aos-delay="60">
+			<div data-aos="fade-up" data-aos-duration="4000" data-aos-delay="60">
 				<h1 class="our">OUR FAVORITE</h1>
 			<h1 class="vang" >INDUCTRIES</h1>
 			</div>
@@ -93,7 +104,6 @@
 <div class="slideshow-container" data-aos="fade-right" data-aos-duration="4000" data-aos-delay="300">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
   <div class="trong">
 	  	<img src="image/quotes.png">
 	   <p class="Ques">Netrix Digital is a skillful partner whose strengths include communication and time management.</p>
@@ -102,7 +112,6 @@
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
 	<div class="trong">
 		<img src="image/quotes.png">
   <p class="Ques">They are unafraid of hard problems.<br>Netrix implemented an entirely new UI/UX, adhering to my non-standard project requirements.</p>
@@ -111,7 +120,6 @@
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
 	<div class="trong">
 		<img src="image/quotes.png">
   <p class="Ques">They are very impressive talented people.<br>Without much guidance, they have managed to pull the project for us.</p>
@@ -205,5 +213,42 @@ function showSlides(n) {
 	<script>
   AOS.init();
 </script>
+	<script>
+        var tl = gsap.timeline({
+            paused: "true"
+        });
+        tl.to(".menu",{
+            duration: 1,
+            x: "0%",
+            ease: Expo.easeInOut
+        });
+        tl.fromTo(".li",{
+            y:"-100%",
+            opacity: 0
+        },{
+            duration: .5,
+            opacity: 1,
+            y: "0%",
+            stagger: 0.25
+        });
+        tl.fromTo(".social-li",{
+            y:"-50%",
+            opacity: 0
+        },{
+            duration:0.8,
+            opacity: 1,
+            stagger: 0.25,
+            ease: Expo.easeOut
+        },
+        "-=0.5");
+        
+        function toggle(){
+            tl.play();
+        }
+        function togglec(){
+            tl.reverse();
+        }
+
+    </script>
 </body>
 </html>

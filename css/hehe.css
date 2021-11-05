@@ -6,6 +6,9 @@
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+	width: 0px;
+}
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
 body{
 	background-image: url("../image/dam.jpg");
@@ -13,6 +16,21 @@ body{
 	background-position: center;
 	background-attachment: fixed;
 	
+}
+@font-face{
+	src: url("../font/MonumentExtended-Ultrabold.otf");
+	font-family: tieude1;
+}
+@font-face{
+	src: url("../font/MonumentExtended-Regular.otf");
+	font-family: tieude2;
+}
+h1{
+	font-family: tieude1;
+}
+.nav h2{
+	font-family: tieude1;
+	color: white;
 }
 .nav1{
 	height: 80px;
@@ -60,7 +78,7 @@ section{
 	font-size: 80px;
 }
 .chu1{
-	-webkit-animation:slide-in-left .7s cubic-bezier(.25,.46,.45,.94) 1s both;
+	-webkit-animation:slide-in-left .8s cubic-bezier(.25,.46,.45,.94) 1s both;
 }
 @-webkit-keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
 .nd2, .nd3, .nd4{
@@ -71,7 +89,7 @@ section{
 	top: 0;
 	left: 8%;
 	width: 60%;
-	-webkit-animation:slide-in-bck-bl 1s cubic-bezier(.68,-.55,.265,1.55) 1.5s both;
+	-webkit-animation:slide-in-bck-bl 0.8s cubic-bezier(.68,-.55,.265,1.55) 2s both;
 }
 .rach img{
 	position: relative;
@@ -82,7 +100,7 @@ section{
 	opacity: 0.95;
 }
 .rach h1{
-	color: black;
+	color: #171413;
 	position: absolute;
 	top: 250px;
 	font-size: 4em;
@@ -91,9 +109,9 @@ section{
 	transform: rotate(-5deg);
 }
 @-webkit-keyframes slide-in-bck-bl{0%{-webkit-transform:translateZ(700px) translateY(300px) translateX(-400px);transform:translateZ(700px) translateY(300px) translateX(-400px);opacity:0}100%{-webkit-transform:translateZ(0) translateY(0) translateX(0);transform:translateZ(0) translateY(0) translateX(0);opacity:1}}@keyframes slide-in-bck-bl{0%{-webkit-transform:translateZ(700px) translateY(300px) translateX(-400px);transform:translateZ(700px) translateY(300px) translateX(-400px);opacity:0}100%{-webkit-transform:translateZ(0) translateY(0) translateX(0);transform:translateZ(0) translateY(0) translateX(0);opacity:1}}
-.menu{
+.menu2{
 	margin-left: 7%;
-	-webkit-animation:slide-in-bl 1s cubic-bezier(.25,.46,.45,.94) 2s both;
+	-webkit-animation:slide-in-bl 1s cubic-bezier(.25,.46,.45,.94) 2.4s both;
 }
 .list{
 	color: white;
@@ -103,7 +121,7 @@ section{
 	font-size: 22px;
 	cursor:pointer;
 }
-.menu{
+.menu2{
 	position: absolute;
 }
 .list:before{
@@ -123,6 +141,7 @@ section{
 	transform: rotate(6deg);
 	height: 250px;
 	border: 7px solid white;
+
 }
 .keoden2{
 	height: 65px;
@@ -132,12 +151,14 @@ section{
 	transform: rotate(-40deg);
 	left: -50px;
 	top: -15px;
+	
 }
 .hinhcuoi{
 	height: 250px;
 	margin-top: 10px;
 	transform: rotate(-6deg);
 	border: 7px solid white;
+	
 }
 .keoden3{
 	height: 60px;
@@ -147,6 +168,7 @@ section{
 	transform: rotate(-40deg);
 	right: 40px;
 	bottom: 10px;
+	
 }
 .kho2{
 	position: absolute;
@@ -157,7 +179,9 @@ section{
 	left: -14px;
 	top: -5px;
 	font-size: 2.5em;
+
 }
+
 .kho3{
 	position: absolute;
 	z-index: 2;
@@ -306,7 +330,7 @@ section{
 .tieude{
 	color:#868686;
 	font-size: 11px;
-	font-family: tieude1;
+	font-family: tieude2;
 	margin-left: 20px;
 	margin-top: 10px;
 	font-weight: 100;
@@ -328,6 +352,7 @@ section{
 .cum1{
 	position: relative;
 	transition: 0.3s ease;
+	z-index: 4;
 }
 .keoden{
 	height: 65px;
@@ -347,6 +372,7 @@ section{
 .cum2{
 	position: relative;
 	transition: 0.3s ease;
+	z-index: 4;
 }
 .keoden1{
 	height: 70px;
@@ -377,6 +403,7 @@ section{
 	right: 65px;
 	bottom: -2px;
 }
+
 .hinh6 a{
 	color: white;
 }

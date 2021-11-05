@@ -4,33 +4,44 @@
 <meta charset="utf-8">
 <title>Diversity</title>
 	<link rel="stylesheet" href="css/hehe.css" type="text/css">
-<link href="css/font.css" rel="stylesheet" type="text/css">
 	
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
 	<link rel="shortcut icon" href="image/favicon (1).ico" />
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+	<script src="Js/gsap.min.js"></script>
 </head>
 
 <body>
-	<div class="container">
 		<div class="nav1">
-			<a href="hihi.html"><img src="image/logo.png"></a>
-			<div class="menu-icon">
-	<span class="menu-icon__line menu-icon__line-left"></span>
-	<span class="menu-icon__line"></span>
-	<span class="menu-icon__line menu-icon__line-right"></span>
-</div>
-<div class="nav">
-	<div class="nav__content">
-		<ul class="nav__list">
-			<li class="nav__list-item"><a href="about.html">About</a></li>
-			<li class="nav__list-item"><a href="Project.html">Projects</a></li>
-			<li class="nav__list-item"><a href="News.html">News</a></li>
-			<li class="nav__list-item"><a href="contact.html">Contact</a></li>
-		</ul>
+			<a href="index.html"><img src="image/logo.png"></a>
+        <div class="button open" onclick="toggle()"></div>
+
+    
+    <div class="menu">
+        <div class="button close" onclick="togglec()"></div>
+
+        <ul class="ul">
+            <li class="li1 li"><a href="about.html">About</a></li>
+            <li class="li2 li"><a href="Project.html">Projects</a></li>
+            <li class="li3 li"><a href="News.html">News</a></li>
+            <li class="li4 li"><a href="contact.html">Contact</a></li>
+            <div class="bg1 bg"></div>
+            <div class="bg2 bg"></div>
+            <div class="bg3 bg"></div>
+            <div class="bg4 bg"></div>
+        </ul>
+        <div class="social">
+            <ul>
+			<li class="social-li"><a href="#">behance</a></li>
+            <li class="social-li"><a href="#">facebook</a></li>
+            <li class="social-li"><a href="#">instagram</a></li>
+            <li class="social-li"><a href="#">youtube</a></li>
+        </ul>
+        </div>
+    </div>
 	</div>
-</div>
-		</div>
+	<div class="container">
 		<div class="body" data-0="transform:translateX(0%);" data-1000="transform:translateX(-346%);">
 			<section>
 			<div class="nd nd1">
@@ -41,7 +52,7 @@
 					<img src="image/vang.png">
 				</div>
 					<div>
-					<ul class="menu">
+					<ul class="menu2">
 						<li class="list">Web & Mobile App</li>
 						<li class="list">Websites</li>
 						<li class="list">Graphics</li>
@@ -157,8 +168,8 @@
 				</div>
 		</section>
 		</div>
-		<div class="footer"></div>
 	</div>
+	
 	<script type="text/javascript" src="Js/skrollr.js"></script>
 	<script type="text/javascript">
 	var s = skrollr.init();
@@ -169,5 +180,42 @@
 	<script>
   AOS.init();
 </script>
+	<script>
+        var tl = gsap.timeline({
+            paused: "true"
+        });
+        tl.to(".menu",{
+            duration: 1,
+            x: "0%",
+            ease: Expo.easeInOut
+        });
+        tl.fromTo(".li",{
+            y:"-100%",
+            opacity: 0
+        },{
+            duration: .5,
+            opacity: 1,
+            y: "0%",
+            stagger: 0.25
+        });
+        tl.fromTo(".social-li",{
+            y:"-50%",
+            opacity: 0
+        },{
+            duration:0.8,
+            opacity: 1,
+            stagger: 0.25,
+            ease: Expo.easeOut
+        },
+        "-=0.5");
+        
+        function toggle(){
+            tl.play();
+        }
+        function togglec(){
+            tl.reverse();
+        }
+
+    </script>
 </body>
 </html>

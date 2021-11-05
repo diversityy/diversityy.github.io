@@ -4,10 +4,12 @@
 <meta charset="utf-8">
 <title>Diversity - Projects</title>
 	<link rel="stylesheet" href="css/project.css" type="text/css">
-	<link rel="stylesheet" href="css/style.css">
 	 <link rel="stylesheet" href="css/Back .css">
-	<link rel='stylesheet' href='https://github.com/lokesh/lightbox2/blob/master/dist/css/lightbox.css'><link rel="stylesheet" href="css/gallery.css">
 	<link rel="shortcut icon" href="image/favicon (1).ico" />
+	<link rel="stylesheet" href="css/gallery.css" type="text/css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<script src="Js/gsap.min.js"></script>
 </head>
 
 <body>
@@ -20,22 +22,32 @@
 
 	<div class="nav1">
 			<a href="index.html"><img src="image/logo.png"></a>
-			<div class="menu-icon">
-	<span class="menu-icon__line menu-icon__line-left"></span>
-	<span class="menu-icon__line"></span>
-	<span class="menu-icon__line menu-icon__line-right"></span>
-</div>
-<div class="nav">
-	<div class="nav__content">
-		<ul class="nav__list">
-			<li class="nav__list-item"><a href="about.html">About</a></li>
-			<li class="nav__list-item"><a href="Project.html">Projects</a></li>
-			<li class="nav__list-item"><a href="News.html">News</a></li>
-			<li class="nav__list-item"><a href="contact.html">Contact</a></li>
-		</ul>
+        <div class="button open" onclick="toggle()"></div>
+
+    
+    <div class="menu">
+        <div class="button close" onclick="togglec()"></div>
+
+        <ul class="ul">
+            <li class="li1 li"><a href="about.html">About</a></li>
+            <li class="li2 li"><a href="Project.html">Projects</a></li>
+            <li class="li3 li"><a href="News.html">News</a></li>
+            <li class="li4 li"><a href="contact.html">Contact</a></li>
+            <div class="bg1 bg"></div>
+            <div class="bg2 bg"></div>
+            <div class="bg3 bg"></div>
+            <div class="bg4 bg"></div>
+        </ul>
+        <div class="social">
+            <ul>
+			<li class="social-li"><a href="#">behance</a></li>
+            <li class="social-li"><a href="#">facebook</a></li>
+            <li class="social-li"><a href="#">instagram</a></li>
+            <li class="social-li"><a href="#">youtube</a></li>
+        </ul>
+        </div>
+    </div>
 	</div>
-</div>
-		</div>
 	    <div class="container">
 			<div class="nd1">
 			<div class="chu">
@@ -43,63 +55,82 @@
 			    <h1 >AND THE PEOPLE <br> WE HELP</h1>
 			</div>
 			</div>
-			<div class="nd2">
-				<h1 class="our">Our projects</h1>
-				<div id="photos">
-    <ul id="photo-gallery">
-      <li>
-        <a href="image/Eugène Delacroix — Gallery.gif" data-lightbox="image-1" data-title="Website">
-          <img src="image/Eugène Delacroix — Gallery.gif"></a>
-      </li>
+			
+<div class="gallery">
 
-      <li>
-        <a href="image/Selected Web Animation 2017.gif" data-lightbox="image-1" data-title="Web app, Website">
-          <img src="image/Selected Web Animation 2017.gif">
-        </a>
-      </li>
-      <li>
-        <a href="image/Web Development Agency Landing Page.gif" data-lightbox="image-1" data-title="Mobile app, Website">
-          <img src="image/Web Development Agency Landing Page.gif" >
-        </a>
-      </li>
-		<h1>WEBSITES</h1>
-      <li>
-        <a href="image/Best Design Inspiration — Mobile App Development —October 2021.gif" 
-           data-lightbox="image-1" data-title="Mobile app, Web app">
-          <img src="image/Best Design Inspiration — Mobile App Development —October 2021.gif">
-        </a>
-      </li>
-      <li>
-        <a href="image/Mobile app by @advinroynetto.gif" data-lightbox="image-1" data-title="Mobile app, Website">
-          <img src="image/Mobile app by @advinroynetto.gif"></a>
-      </li>
-      <li>
-        <a href="image/Movie Animation.gif" data-lightbox="image-1" data-title="Mobile app, Web app, Website">
-          <img src="image/Movie Animation.gif">
-        </a>
-      </li>
-		<h1>Mobile app</h1>
-		 <li>
-        <a href="image/Choose Your Dream Dress.gif" 
-           data-lightbox="image-1" data-title="Mobile app, Web app">
-          <img src="image/Choose Your Dream Dress.gif">
-        </a>
-      </li>
-      <li>
-        <a href="image/boys and girls.gif" data-lightbox="image-1" data-title="Mobile app, Website">
-          <img src="image/boys and girls.gif"></a>
-      </li>
-      <li>
-        <a href="image/Say Cheese!.gif" data-lightbox="image-1" data-title="Mobile app, Web app, Website">
-          <img src="image/Say Cheese!.gif">
-        </a>
-      </li>
-		<h1>Graphics & Motion</h1>
-      
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">all project</li>
+        <li class="buttons" data-filter="ice-cream">Websites </li>
+        <li class="buttons" data-filter="chocolate">Mobile App</li>
+        <li class="buttons" data-filter="cake">Graphics</li>
+        <li class="buttons" data-filter="juice">Motion</li>
     </ul>
-				
-  </div>
-			</div>
+
+    <div class="image-container">
+
+        <a href="image/Eugène Delacroix — Gallery.gif" class="image ice-cream">
+            <img src="image/Eugène Delacroix — Gallery.gif" alt="">
+        </a>
+        <a href="image/Selected Web Animation 2017.gif" class="image ice-cream">
+            <img src="image/Selected Web Animation 2017.gif" alt="">
+        </a>
+        <a href="image/Online store homepage animation.gif" class="image ice-cream">
+            <img src="image/Online store homepage animation.gif" alt="">
+        </a>
+		 <a href="image/Web Development Agency Landing Page.gif" class="image ice-cream">
+            <img src="image/Web Development Agency Landing Page.gif" alt="">
+        </a>
+		 <a href="image/Camp Website.gif" class="image ice-cream cake">
+            <img src="image/Camp Website.gif" alt="">
+        </a>
+
+        <a href="image/Mobile app by @advinroynetto.gif" class="image chocolate">
+            <img src="image/Mobile app by @advinroynetto.gif" alt="">
+        </a>
+		 <a href="image/Beast Barz app - cards animation concept.gif" class="image chocolate cake">
+            <img src="image/Beast Barz app - cards animation concept.gif" alt="">
+        </a>
+        <a href="image/Best Design Inspiration — Mobile App Development —October 2021.gif" class="image chocolate">
+            <img src="image/Best Design Inspiration — Mobile App Development —October 2021.gif" alt="">
+        </a>
+		  <a href="image/Movie Animation.gif" class="image chocolate">
+            <img src="image/Movie Animation.gif" alt="">
+        </a>
+		 <a href="image/Introduction Walkthroughs of Eatoo app.gif" class="image chocolate cake">
+            <img src="image/Introduction Walkthroughs of Eatoo app.gif" alt="">
+        </a>
+
+		 <a href="image/Concepts arts _ Fellow L_A.png" class="image cake">
+            <img src="image/Concepts arts _ Fellow L_A.png" alt="">
+        </a>
+        <a href="image/Enterprise Design Sprints - Jack Daly.jpg" class="image cake">
+            <img src="image/Enterprise Design Sprints - Jack Daly.jpg" alt="">
+        </a>
+        <a href="image/GO-CAR.jpg" class="image cake">
+            <img src="image/GO-CAR.jpg" alt="">
+        </a>
+		
+        <a href="image/download.gif" class="image juice">
+            <img src="image/download.gif" alt="">
+        </a>
+        <a href="image/Choose Your Dream Dress.gif" class="image juice">
+            <img src="image/Choose Your Dream Dress.gif" alt="">
+        </a>
+        <a href="image/YORA Pet Foods.gif" class="image juice">
+            <img src="image/YORA Pet Foods.gif" alt="">
+        </a>
+        <a href="image/boys and girls.gif" class="image juice">
+            <img src="image/boys and girls.gif" alt="">
+        </a>
+        <a href="image/Say Cheese!.gif" class="image juice">
+            <img src="image/Say Cheese!.gif" alt="">
+        </a>
+
+       
+
+    </div>
+
+</div>
 				<div class="footer">
 		<div>
 			<img class="logo" src="image/logo.png">
@@ -111,11 +142,86 @@
 					</div>
 		</div>
 	</div>
-	    </div>
+	</div> 
 	    		
 	<script  src="Js/script.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script  src="Js/Back .js"></script>
 	 <script src='https://raw.githubusercontent.com/lokesh/lightbox2/master/dist/js/lightbox.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js'></script><script  src="Js/gallery.js"></script>
+	
+	<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $('.buttons').click(function(){
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        var filter = $(this).attr('data-filter')
+
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
+        }
+
+    });
+
+    $('.gallery').magnificPopup({
+
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
+        }
+
+    });
+
+});
+
+</script>
+	<script>
+        var tl = gsap.timeline({
+            paused: "true"
+        });
+        tl.to(".menu",{
+            duration: 1,
+            x: "0%",
+            ease: Expo.easeInOut
+        });
+        tl.fromTo(".li",{
+            y:"-100%",
+            opacity: 0
+        },{
+            duration: .5,
+            opacity: 1,
+            y: "0%",
+            stagger: 0.25
+        });
+        tl.fromTo(".social-li",{
+            y:"-50%",
+            opacity: 0
+        },{
+            duration:0.8,
+            opacity: 1,
+            stagger: 0.25,
+            ease: Expo.easeOut
+        },
+        "-=0.5");
+        
+        function toggle(){
+            tl.play();
+        }
+        function togglec(){
+            tl.reverse();
+        }
+
+    </script>
 </body>
 </html>

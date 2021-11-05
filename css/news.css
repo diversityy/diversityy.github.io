@@ -6,6 +6,9 @@
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+	width: 0px;
+}
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
 body{
 	background-image: url("../image/dam.jpg");
@@ -38,7 +41,7 @@ h1{
 	background: url("../image/tren.png");
 	background-size: cover;
 	text-align: center;
-	-webkit-animation:slide-in-top 1s cubic-bezier(.77,0.000,.175,1.000) 0.5s both;
+	-webkit-animation:slide-in-top 1s cubic-bezier(.77,0.000,.175,1.000) 0.7s both;
 }
 @-webkit-keyframes slide-in-top{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-top{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
 .chu{

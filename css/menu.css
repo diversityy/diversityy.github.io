@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+    margin: 0;
+    padding: 0;
+
+}
+@font-face{
+	src: url("file:///C|/Users/Admin/Desktop/font/MonumentExtended-Regular.otf");
+	font-family: tieude2;
+}
+.button{
+    position: absolute;
+  right: 80px;
+  top: 40px;
+  cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+	text-align: center;
+}
+.open:after {
+	content: "\f0c9";
+    position: absolute;
+	font-family: FontAwesome;
+	background: #171614;
+	line-height: 49px;
+	font-size: 1.5em;
+	border-radius: 50%;	
+	height: 50px;
+	width: 50px;
+	top: -17px;
+	left: -10px;
+	z-index: -1;
+}
+.close:after {
+	content: "\f00d";
+    position: absolute;
+	font-family: FontAwesome;
+	line-height: 49px;
+	font-size: 2em;
+	border-radius: 50%;	
+	height: 50px;
+	width: 50px;
+	top: -17px;
+	left: -10px;
+	z-index: -1;
+}
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    transform: translateX(-100%);
+}
+.menu .button{
+    color: white;
+}
+.ul{
+    position: absolute;
+    left: 20%;
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    align-items: left;
+    height: 100vh;
+    flex-direction: column;
+}
+.ul li{
+    margin: 20px 0;
+    z-index: 2;
+
+}
+.ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 2s;
+    font-family: 'Monument';
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 500;
+    mix-blend-mode: difference;
+}
+.social{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    height: 80px;
+    width: 100%;
+
+}
+.social ul{
+    margin-left: 50px;
+    display: flex;
+
+}
+.social ul li{
+    margin: 0px 10px;
+
+}
+.social ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Monument';
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: lighter;
+
+}
+.bg{
+    position: absolute;
+    width: 470px;
+    filter: grayscale(1);
+    height: 300px;
+    mix-blend-mode: difference;
+}
+.bg1{
+    top: 45px;
+    left: 180px;
+    background: url("../image/banner-2.jpg") 50% 50%;
+    background-size: cover;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: 1s ease-in-out;
+}
+.bg2{
+    top: 100px;
+    left: 250px;
+    background: url("../image/Concepts arts _ Fellow L_A.png") no-repeat 50% 50%;
+    background-size: cover;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: 1s ease-in-out;
+}
+.bg3{
+    top: 250px;
+    left: 200px;
+    background: url("../image/GO-CAR.jpg") 50% 50%;
+    background-size: cover;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: 1s ease-in-out;
+}
+.bg4{
+    top: 400px;
+    left: 200px;
+    background: url("../image/pexels-william-fortunato-6140675.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: 1s ease-in-out;
+}
+.li1:hover ~ .bg1,
+.li2:hover ~ .bg2,
+.li3:hover ~ .bg3,
+.li4:hover ~ .bg4{
+    opacity: 1;
+    transform: translateY(0%);
+    transition: 1s ease-in-out;
+	
+}
+.ul li a:hover{
+    transition: 2s ease;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px white;
+    font-style: italic;
+}

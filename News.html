@@ -8,6 +8,9 @@
 	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
 	 <link rel="stylesheet" href="css/Back .css">
 	<link rel="shortcut icon" href="image/favicon (1).ico" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/menu.css">
+	<script src="Js/gsap.min.js"></script>
 </head>
 
 <body>
@@ -20,22 +23,32 @@
 
 	<div class="nav1">
 			<a href="index.html"><img src="image/logo.png"></a>
-			<div class="menu-icon">
-	<span class="menu-icon__line menu-icon__line-left"></span>
-	<span class="menu-icon__line"></span>
-	<span class="menu-icon__line menu-icon__line-right"></span>
-</div>
-<div class="nav">
-	<div class="nav__content">
-		<ul class="nav__list">
-			<li class="nav__list-item"><a href="about.html">About</a></li>
-			<li class="nav__list-item"><a href="Project.html">Projects</a></li>
-			<li class="nav__list-item"><a href="News.html">News</a></li>
-			<li class="nav__list-item"><a href="contact.html">Contact</a></li>
-		</ul>
+        <div class="button open" onclick="toggle()"></div>
+
+    
+    <div class="menu">
+        <div class="button close" onclick="togglec()"></div>
+
+        <ul class="ul">
+            <li class="li1 li"><a href="about.html">About</a></li>
+            <li class="li2 li"><a href="Project.html">Projects</a></li>
+            <li class="li3 li"><a href="News.html">News</a></li>
+            <li class="li4 li"><a href="contact.html">Contact</a></li>
+            <div class="bg1 bg"></div>
+            <div class="bg2 bg"></div>
+            <div class="bg3 bg"></div>
+            <div class="bg4 bg"></div>
+        </ul>
+        <div class="social">
+            <ul>
+			<li class="social-li"><a href="#">behance</a></li>
+            <li class="social-li"><a href="#">facebook</a></li>
+            <li class="social-li"><a href="#">instagram</a></li>
+            <li class="social-li"><a href="#">youtube</a></li>
+        </ul>
+        </div>
+    </div>
 	</div>
-</div>
-		</div>
 	<div class="container">
 		<div class="nd1">
 			<div class="chu">
@@ -46,7 +59,7 @@
 		<div class="nd2">
 			<!-- partial:index.partial.html -->
 <div class="row">
-  <div class="example-1 card">
+  <div class="example-1 card" data-aos="fade-right">
     <div class="wrapper wrapper1">
       <div class="date">
         <span class="day">03</span>
@@ -71,7 +84,7 @@
       </div>
     </div>
   </div>
-  <div class="example-2 card">
+  <div class="example-2 card" data-aos="fade-left">
     <div class="wrapper wrapper2">
       <div class="header">
         <div class="date">
@@ -100,7 +113,7 @@
 </div>
 			<div class="nd3">
 				<div class="row1">
-				<div class="example-2 card">
+				<div class="example-2 card" data-aos="fade-right">
     <div class="wrapper wrapper3">
       <div class="header">
         <div class="date">
@@ -126,7 +139,7 @@
       </div>
     </div>
   </div>
-				 <div class="example-1 card">
+				 <div class="example-1 card" data-aos="fade-left">
     <div class="wrapper wrapper4">
       <div class="date">
         <span class="day">02</span>
@@ -155,7 +168,7 @@
 			</div>
 			<div class="nd4">
 				<div class="row2">
-  <div class="example-1 card">
+  <div class="example-1 card" data-aos="fade-right">
     <div class="wrapper wrapper5">
       <div class="date">
         <span class="day">01</span>
@@ -180,7 +193,7 @@
       </div>
     </div>
   </div>
-  <div class="example-2 card">
+  <div class="example-2 card" data-aos="fade-right">
     <div class="wrapper wrapper6">
       <div class="header">
         <div class="date">
@@ -225,5 +238,46 @@
 	</div>
 	<script  src="Js/script.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script  src="Js/Back .js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+  AOS.init();
+</script>
+		<script>
+        var tl = gsap.timeline({
+            paused: "true"
+        });
+        tl.to(".menu",{
+            duration: 1,
+            x: "0%",
+            ease: Expo.easeInOut
+        });
+        tl.fromTo(".li",{
+            y:"-100%",
+            opacity: 0
+        },{
+            duration: .5,
+            opacity: 1,
+            y: "0%",
+            stagger: 0.25
+        });
+        tl.fromTo(".social-li",{
+            y:"-50%",
+            opacity: 0
+        },{
+            duration:0.8,
+            opacity: 1,
+            stagger: 0.25,
+            ease: Expo.easeOut
+        },
+        "-=0.5");
+        
+        function toggle(){
+            tl.play();
+        }
+        function togglec(){
+            tl.reverse();
+        }
+
+    </script>
 </body>
 </html>
